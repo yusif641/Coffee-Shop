@@ -1,0 +1,1542 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,600);
+@import url(https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei:regular);
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+button,
+input {
+    border: none;
+    font-family: inherit;
+    font-size: inherit
+}
+
+button:focus,
+input:focus {
+    outline: none
+}
+
+body {
+    background-color: #F4F1EE;
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 167%;
+    letter-spacing: 0.04em;
+    color: #404040
+}
+
+body._active {
+    overflow: hidden;
+}
+
+img {
+    vertical-align: top
+}
+
+li,
+ol,
+ul {
+    list-style: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit
+}
+
+._ibg {
+    position: relative
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+button,
+input {
+    border: none;
+    font-family: inherit;
+    font-size: inherit
+}
+
+button:focus,
+input:focus {
+    outline: none
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+._container {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+.wrap {
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100%
+}
+
+.more-button {
+    cursor: pointer;
+    border: 1px solid #d48a5c;
+    color: #000;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear
+}
+
+.more-button:hover {
+    background-color: #d48a5c;
+    color: #FFF
+}
+
+.more-button__link {
+    font-size: 1rem;
+    line-height: 162%;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 10px 22px
+}
+
+.explore-button {
+    cursor: pointer;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
+    background: #232020;
+    border: 1px solid #232020;
+    color: #fff
+}
+
+.explore-button:hover {
+    background-color: #F4F1EE;
+    color: #232020
+}
+
+.explore-button__link {
+    padding: 10px 13px;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 162%;
+    letter-spacing: 0.04em
+}
+
+@media (max-width: 400px) {
+    .more-button__link {
+        font-size: 0.8rem;
+        padding: 10px 10px;
+    }
+}
+
+.name {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 162%;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    background: #232020;
+    padding: 10px 17px
+}
+
+.correct {
+    border: 1px solid rgb(91, 212, 54) !important
+}
+
+.incorrect {
+    border: 1px solid rgb(238, 26, 79) !important
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 133px;
+    z-index: 1000;
+    background-color: #F4F1EE;
+}
+
+.header__logo {
+    z-index: 10000;
+}
+
+.header__button {
+    z-index: 1000;
+}
+
+.header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 133px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.menu-header__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 50px
+}
+
+.menu-header__link {
+    font-size: 1rem
+}
+
+.menu-header__link.active {
+    color: #d48a5c;
+}
+
+.menu-header__link:hover {
+    text-decoration: underline
+}
+
+.header__menu {
+    transition: all 0.3s linear;
+}
+
+@media (max-width: 700px) {
+    .menu-header__list {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 150px;
+        gap: 45px;
+    }
+
+    .menu-header__link {
+        font-size: 40px;
+    }
+
+    .icon-menu {
+        position: relative;
+        width: 30px;
+        height: 17px;
+        cursor: pointer;
+        left: 50%;
+        z-index: 5;
+    }
+
+    .icon-menu span {
+        transition: all 0.5s 0s ease;
+        top: calc(50% - 1px);
+        left: 0px;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 10px;
+        background-color: #232020;
+    }
+
+    .icon-menu span:first-child {
+        top: 0px;
+    }
+
+    .icon-menu span:last-child {
+        top: auto;
+        bottom: 0px;
+        width: 21px;
+    }
+
+    .icon-menu._active span {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    .icon-menu._active span:first-child {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: calc(50% - 1px);
+    }
+
+    .icon-menu._active span:last-child {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        bottom: calc(50% - 1px);
+        width: 30px;
+    }
+
+    .header__menu {
+        background-color: #F4F1EE;
+        -webkit-transform: translate(0, -100%);
+        transform: translate(0, -100%);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        overflow: auto;
+        padding: 100px 0px 20px 0px;
+    }
+
+    .header__menu._active {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+.home {
+    padding: 245px 0px 71px 0px
+}
+
+.home__info {
+    -webkit-transition: all 0.5s linear 0.1s;
+    transition: all 0.5s linear 0.1s;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    opacity: 0
+}
+
+.home__info.actives {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1
+}
+
+.home__image {
+    -webkit-transition: all 0.5s linear 0.1s;
+    transition: all 0.5s linear 0.1s;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 0
+}
+
+.home__image.actives {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1
+}
+
+.home__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.home__title {
+    font-family: "ZCOOL XiaoWei";
+    font-size: 2.8125rem;
+    line-height: 156%;
+    letter-spacing: 0.04em;
+    color: #232020;
+    margin-bottom: 33px
+}
+
+.home__subtitle {
+    max-width: 500px;
+    margin-bottom: 55px
+}
+
+.home__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 24px
+}
+
+@media (max-width:1250px) {
+    .home__container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+        gap: 60px
+    }
+
+    .home__title {
+        max-width: 650px;
+        margin: 0 auto 27px auto;
+        font-size: 2.1875rem
+    }
+
+    .home__subtitle {
+        margin: 0 auto 40px auto
+    }
+
+    .home__buttons {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+}
+
+@media (max-width:600px) {
+    .home__container {
+        gap: 60px
+    }
+
+    .home__title {
+        margin: 0 auto 15px auto;
+        font-size: 1.875rem
+    }
+
+    .home__subtitle {
+        margin: 0 auto 30px auto;
+        font-size: 0.8125rem
+    }
+
+    .home__buttons {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 10px
+    }
+
+    .home__image img {
+        max-width: 100%
+    }
+}
+
+.about {
+    padding: 95px 0px
+}
+
+.about__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 40px;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.about__container.actives {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.about__item {
+    padding: 0px 0px 29px 0px;
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    height: 256px
+}
+
+.about__item:before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 256px;
+    bottom: -23px;
+    left: -16px;
+    background: url("../img/about/about-decor.jpg") 0 0 no-repeat;
+    z-index: -10
+}
+
+.about__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10
+}
+
+.about__info {
+    margin-bottom: 131px;
+    position: relative;
+    padding: 16px 61px 32px 16px
+}
+
+.about__info:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    background: url("../img/about/abour-info-decor.png") 0 0 no-repeat
+}
+
+.about__number {
+    position: relative;
+    font-family: "ZCOOL XiaoWei";
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    line-height: 62.5%;
+    color: #fff;
+}
+
+.about__title {
+    position: relative;
+    font-family: "ZCOOL XiaoWei";
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    color: #232020;
+}
+
+.about__text {
+    font-size: 0.625rem;
+    line-height: 100%;
+    letter-spacing: 0.04em;
+    color: #fff;
+    max-width: 195px;
+    margin-left: 16px
+}
+
+@media (max-width:400px) {
+    .about__bg img {
+        width: 100%
+    }
+
+    .about__item:before {
+        display: none
+    }
+
+    .about__info {
+        margin-bottom: 90px
+    }
+}
+
+.roasted {
+    position: relative;
+    padding: 389px 0px
+}
+
+.roasted__container {
+    text-align: center
+}
+
+.roasted__title {
+    font-family: "ZCOOL XiaoWei";
+    font-size: 3.4375rem;
+    line-height: 118%;
+    letter-spacing: 0.04em;
+    color: #232020;
+    margin-bottom: 10px;
+    -webkit-transform: translateY(120%);
+    transform: translateY(120%);
+    opacity: 0;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear
+}
+
+.roasted__title.actives {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1
+}
+
+.roasted__subtitle {
+    max-width: 781px;
+    margin: 0 auto 10px auto;
+    -webkit-transform: translateY(120%);
+    transform: translateY(120%);
+    opacity: 0;
+    -webkit-transition: all 0.3s linear 0.3s;
+    transition: all 0.3s linear 0.3s
+}
+
+.roasted__subtitle.actives {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1
+}
+
+.roasted__button {
+    display: inline-block
+}
+
+.roasted__button-container {
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+    opacity: 0;
+    -webkit-transition: all 0.3s linear 0.6s;
+    transition: all 0.3s linear 0.6s
+}
+
+.roasted__button-container.actives {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 1
+}
+
+.roasted__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1000
+}
+
+@media (max-width:600px) {
+    .roasted__title {
+        font-size: 2.1875rem
+    }
+
+    .roasted__subtitle {
+        font-size: 0.875rem
+    }
+}
+
+.product {
+    padding: 141px 0px 117px 0px
+}
+
+.product__info {
+    text-align: center;
+    -webkit-transform: translateY(-120%);
+    transform: translateY(-120%);
+    opacity: 0;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear
+}
+
+.product__info.actives {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.product__name {
+    margin-bottom: 17px
+}
+
+.product__title {
+    margin-bottom: 47px;
+    font-family: "ZCOOL XiaoWei";
+    font-size: 3.4375rem;
+    line-height: 118%;
+    letter-spacing: 0.04em;
+    color: #232020
+}
+
+.product__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    row-gap: 32px
+}
+
+.item-product {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.item-product__info {
+    border: 3px solid #414141;
+    min-width: 475px;
+    padding: 10px 29px 14px
+}
+
+.item-product__title {
+    font-family: "ZCOOL XiaoWei";
+    font-size: 1.875rem;
+    line-height: 217%;
+    letter-spacing: 0.04em;
+    color: #232020;
+    text-align: right
+}
+
+.item-product__price {
+    text-align: right;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    color: #d48a5c
+}
+
+.item-product__image {
+    margin-right: -90px;
+    z-index: 100
+}
+
+.item-product__image img {
+    border-radius: 50%
+}
+
+.item-1 {
+    opacity: 0;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear
+}
+
+.item-1.actives {
+    opacity: 1
+}
+
+.item-2 {
+    opacity: 0;
+    -webkit-transition: all 0.3s linear 0.2s;
+    transition: all 0.3s linear 0.2s
+}
+
+.item-2.actives {
+    opacity: 1
+}
+
+.item-3 {
+    opacity: 0;
+    -webkit-transition: all 0.3s linear 0.4s;
+    transition: all 0.3s linear 0.4s
+}
+
+.item-3.actives {
+    opacity: 1
+}
+
+.item-4 {
+    opacity: 0;
+    -webkit-transition: all 0.3s linear 0.6s;
+    transition: all 0.3s linear 0.6s
+}
+
+.item-4.actives {
+    opacity: 1
+}
+
+.item-5 {
+    opacity: 0;
+    -webkit-transition: all 0.3s linear 0.8s;
+    transition: all 0.3s linear 0.8s
+}
+
+.item-5.actives {
+    opacity: 1
+}
+
+.item-6 {
+    opacity: 0;
+    -webkit-transition: all 0.3s linear 0.9s;
+    transition: all 0.3s linear 0.9s
+}
+
+.item-6.actives {
+    opacity: 1
+}
+
+@media (max-width:1250px) {
+    .item-product {
+        -webkit-transition: all 0.8s linear;
+        transition: all 0.8s linear
+    }
+}
+
+@media (max-width:600px) {
+    .product__title {
+        font-size: 2.1875rem;
+        margin-bottom: 35px
+    }
+
+    .item-product {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        border: 3px solid #414141;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+        flex: 0 1 100%;
+        padding: 30px 0px
+    }
+
+    .item-product__info {
+        border: none;
+        padding: 0;
+        min-width: 0
+    }
+
+    .item-product__title {
+        text-align: center;
+        line-height: 137%;
+        margin-bottom: 25px
+    }
+
+    .item-product__price {
+        text-align: center
+    }
+
+    .item-product__image {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 20px
+    }
+}
+
+.machine {
+    padding: 37px 0px;
+    background: #fff
+}
+
+.machine__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.machine__title {
+    font-family: "ZCOOL XiaoWei";
+    font-size: 3.4375rem;
+    line-height: 118%;
+    letter-spacing: 0.04em;
+    color: #232020;
+    margin-bottom: 34px;
+    -webkit-transform: translateX(-80%);
+    transform: translateX(-80%);
+    opacity: 0;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear
+}
+
+.machine__title.actives {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+}
+
+.machine__texts {
+    font-size: 1rem;
+    line-height: 162%;
+    letter-spacing: 0.04em;
+    color: #6f6f6f;
+    margin-bottom: 33px;
+    -webkit-transform: translateX(-80%);
+    transform: translateX(-80%);
+    opacity: 0;
+    -webkit-transition: all 0.4s linear 0.4s;
+    transition: all 0.4s linear 0.4s
+}
+
+.machine__texts.actives {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+}
+
+.machine__text:not(:last-child) {
+    margin-bottom: 7px
+}
+
+.machine__button {
+    display: inline-block
+}
+
+.machine__button-container {
+    -webkit-transform: translateX(-80%);
+    transform: translateX(-80%);
+    opacity: 0;
+    -webkit-transition: all 0.4s linear 0.8s;
+    transition: all 0.4s linear 0.8s
+}
+
+.machine__button-container.actives {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+}
+
+.machine__image {
+    -webkit-transition: all 0.4s linear 1.2s;
+    transition: all 0.4s linear 1.2s;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0
+}
+
+.machine__image.actives {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+
+._black {
+    color: #000
+}
+
+@media (max-width:1250px) {
+    .machine__title {
+        font-size: 2.5rem
+    }
+
+    .machine__container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center
+    }
+
+    .machine__text {
+        max-width: 650px;
+        margin: 0 auto
+    }
+
+    .machine__image {
+        -webkit-transition: all 0.3s linear;
+        transition: all 0.3s linear
+    }
+}
+
+@media (max-width:600px) {
+    .machine__title {
+        font-size: 1.875rem
+    }
+
+    .machine__text {
+        font-size: 0.8125rem
+    }
+
+    .machine__image img {
+        max-width: 100%
+    }
+}
+
+.best {
+    padding: 91px 0px 47px 0px
+}
+
+.best__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 47px;
+    transform: translateX(-120%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.best__info.actives {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.best__title {
+    font-family: "ZCOOL XiaoWei";
+    font-size: 3.4375rem;
+    line-height: 118%;
+    letter-spacing: 0.04em;
+    color: #232020
+}
+
+.best__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 30px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear 0.5s;
+}
+
+.item-best {
+    background-color: #fff;
+    padding: 24px 24px 30px 24px;
+}
+
+.best__content.actives {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.item-best__image {
+    margin-bottom: 31px
+}
+
+.item-best__rating {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 17px
+}
+
+.item-best__rate {
+    font-size: 1rem;
+    line-height: 162%;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    color: #1c1a1a
+}
+
+.item-best__title {
+    font-family: "ZCOOL XiaoWei";
+    font-size: 1.5rem;
+    line-height: 150%;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #1c1a1a;
+    margin-bottom: 13px
+}
+
+.item-best__price {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 162%;
+    letter-spacing: 0.04em;
+    color: #1c1a1a
+}
+
+.item-best__price span {
+    color: #eab665
+}
+
+@media (max-width:1250px) {
+    .best__title {
+        font-size: 2.1875rem
+    }
+}
+
+@media (max-width:600px) {
+    .best__info {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        gap: 35px
+    }
+}
+
+@media (max-width:400px) {
+    .item-best {
+        max-width: 300px
+    }
+
+    .item-best__image img {
+        max-width: 255px
+    }
+}
+
+.booking__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.booking {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.4s linear;
+}
+
+.booking.actives {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.booking__reservation {
+    background-color: #fff;
+    text-align: center;
+    padding: 26px 0px;
+    width: 100%
+}
+
+.booking__title {
+    font-size: 0.875rem;
+    line-height: 126%;
+    color: #d48a5c;
+    margin-bottom: 10px
+}
+
+.booking__subtitle {
+    font-family: "ZCOOL XiaoWei";
+    font-size: 1.8125rem;
+    line-height: 110%;
+    color: #1c1a1a;
+    margin-bottom: 21px
+}
+
+.booking__form {
+    margin-bottom: 21px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 392px;
+    margin: 0 auto 21px auto;
+    padding: 0px 15px
+}
+
+.booking__button {
+    display: inline-block
+}
+
+.form-booking__select {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative
+}
+
+.form-booking__select:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 21px;
+    height: 23px;
+    background: url("../img/form/person-icon.svg") 0 0 no-repeat;
+    z-index: 100
+}
+
+.form-booking__input {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    background-color: #f4f1ee;
+    border: 1px solid #f4f1ee;
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 186%;
+    letter-spacing: 0.04em;
+    color: #5c5c5c;
+    padding: 16px 0px 16px 18px;
+    width: 100%
+}
+
+.email {
+    position: relative
+}
+
+.email:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 23px;
+    height: 16px;
+    background: url("../img/form/email-icon.svg") 0 0 no-repeat;
+    z-index: 100
+}
+
+input[type=date]::-webkit-calendar-picker-indicator,
+input[type=date]::-webkit-inner-spin-button {
+    position: relative;
+    background: url("../img/form/data-icon.svg") 0 0 no-repeat;
+    width: 22px;
+    height: 21px;
+    right: 15px
+}
+
+@media (max-width:1250px) {
+    .booking__container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 0 auto
+    }
+
+    .booking__reservation {
+        max-width: 587px;
+        margin: 0 auto
+    }
+
+    .booking__image {
+        margin: 0 auto
+    }
+
+    .booking__image img {
+        max-width: 587px;
+        width: 100%
+    }
+}
+
+@media (max-width:400px) {
+    .booking__subtitle {
+        font-size: 1.5625rem
+    }
+}
+
+.news {
+    padding: 100px 0px
+}
+
+.news__info {
+    text-align: center;
+    transform: rotate(180deg);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.news__info.actives {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.news__title {
+    font-family: "ZCOOL XiaoWei";
+    font-size: 3.4375rem;
+    line-height: 118%;
+    letter-spacing: 0.04em;
+    color: #232020;
+    margin-bottom: 58px
+}
+
+.news__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transform: translateX(120%);
+    opacity: 0;
+    transition: all 0.5s linear 0.5s;
+}
+
+.news__content.actives {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.news__name {
+    margin-bottom: 34px;
+    display: inline-block
+}
+
+.item-news__info {
+    background-color: #1c1a1a;
+    padding: 19px 0px 19px 27px
+}
+
+.item-news__by {
+    font-size: 0.875rem;
+    line-height: 136%;
+    letter-spacing: 0.04em;
+    color: #fff;
+    margin-bottom: 10px
+}
+
+.item-news__by span {
+    color: #eab665
+}
+
+.item-news__title {
+    font-family: "ZCOOL XiaoWei";
+    font-size: 1.25rem;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #fff;
+    max-width: 251px;
+    margin-bottom: 5px
+}
+
+.item-news__more {
+    cursor: pointer;
+    position: relative;
+    font-size: 0.875rem;
+    line-height: 136%;
+    letter-spacing: 0.04em;
+    color: #eab665
+}
+
+.item-news__more:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -90px;
+    width: 100%;
+    height: 100%;
+    background: url("../img/news/news-arrow.svg") 0 0 no-repeat
+}
+
+@media (max-width:400px) {
+    .news__title {
+        font-size: 2.4375rem;
+        margin-bottom: 35px
+    }
+
+    .news__name {
+        margin-bottom: 25px
+    }
+
+    .item-news {
+        max-width: 300px
+    }
+
+    .item-news__image img {
+        max-width: 300px
+    }
+
+    .item-news__title {
+        font-size: 0.875rem
+    }
+
+    .item-news__by {
+        font-size: 0.8125rem
+    }
+
+    .item-news__more {
+        font-size: 0.8125rem
+    }
+}
+
+.footer {
+    background-color: #fff
+}
+
+.footer__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 64px
+}
+
+.footer__element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 10px
+}
+
+.footer__text {
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 136%;
+    letter-spacing: 0.04em;
+    color: #1c1a1a
+}
+
+.footer__text span {
+    font-weight: 600
+}
+
+.footer__email {
+    position: relative
+}
+
+.footer__email:after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: -310px;
+    width: 100%;
+    height: 100%;
+    background: url("../img/footer/paper-plane.svg") 0 0 no-repeat
+}
+
+.footer__email input {
+    background-color: #f2eae2;
+    font-size: 0.875rem;
+    line-height: 136%;
+    letter-spacing: 0.04em;
+    color: #8d8d8d;
+    padding: 11px 0px 11px 15px;
+    border: 1px solid #f4f1ee;
+    width: 350px
+}
+
+.footer__copy {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 136%;
+    letter-spacing: 0.04em;
+    color: #979797;
+    padding: 17px 0px;
+    border-top: 1px solid #eab665
+}
+
+.go-footer {
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 62px;
+    margin-top: -25px
+}
+
+.go-footer__image {
+    margin-bottom: 5px
+}
+
+.go-footer__title {
+    font-size: 1rem;
+    line-height: 136%;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    color: #1c1a1a
+}
+
+.cafena-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 30px
+}
+
+.cafena-footer__info {
+    margin-bottom: 110px
+}
+
+.cafena-footer__logo {
+    margin-bottom: 10px
+}
+
+.cafena-footer__title {
+    font-size: 0.875rem;
+    line-height: 136%;
+    letter-spacing: 0.04em;
+    color: #848484;
+    max-width: 444px
+}
+
+.cafena-footer__socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px
+}
+
+@media (max-width:1000px) {
+    .footer__info {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 50px
+    }
+
+    .go-footer {
+        margin-bottom: 45px
+    }
+}
+
+@media (max-width:600px) {
+    .cafena-footer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px
+    }
+
+    .cafena-footer__info {
+        margin-bottom: 0
+    }
+}
+
+@media (max-width:400px) {
+    .footer__copy {
+        font-size: 0.8125rem
+    }
+
+    .footer__email:after {
+        right: -215px
+    }
+
+    .footer__email input {
+        width: 250px
+    }
+}
