@@ -661,7 +661,7 @@ a {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    row-gap: 32px
+    row-gap: 32px;
     opacity: 0;
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
